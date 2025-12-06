@@ -23,7 +23,7 @@ const handlerWithAuth = withAuth((request) => {
       );
 
       registerPaidTool(
-        server,
+        server as unknown as Parameters<typeof registerPaidTool>[0],
         "generate_image",
         "Generate an image",
         {
